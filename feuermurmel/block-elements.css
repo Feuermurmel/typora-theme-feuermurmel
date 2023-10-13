@@ -1,0 +1,77 @@
+/* Code blocks. */
+.md-fences {
+    font-family: ui-monospace;
+    font-size: var(--monospace-font-size);
+
+    background: var(--light-background);
+}
+
+/* MarkDown metadata blocks ("front matter"). The selector needs to be this
+specific to override styling set by base.css. */
+pre.md-meta-block {
+    font-family: ui-monospace;
+    font-size: var(--monospace-font-size);
+
+    background: unset;
+    color: var(--color-markup);
+
+    border: 2px var(--color-markup);
+    padding: 0.6rem 0;
+    border-style: solid none;
+    margin-bottom: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: ui-rounded;
+
+    /* Small heading look better when they're a bit closed together, appearing
+    as one block when spread across multiple lines, compared to when using the
+    same line-height as for regular paragraphs. But with the default line-height,
+    especially large titles are awfully close together, thus this compromise */
+    line-height: 1.2em;
+}
+
+/* Smaller margin-top for <h1> than other headedins, to avoid large margin
+after fist title. <h1> shouldn't be used anywhere else. */
+h1 { font-size: 2.6rem;  font-weight: 500; color: black;                margin-top: 0;       margin-bottom: 2rem; }
+h2 { font-size: 2.2rem;  font-weight: 550; color: var(--color-primary); margin-top: 3rem;    margin-bottom: 1rem; }
+h3 { font-size: 1.8rem;  font-weight: 550; color: var(--color-primary); margin-top: 2.5rem;  margin-bottom: 1rem; }
+h4 { font-size: 1.5rem;  font-weight: 550; color: var(--color-secondary);          margin-top: 2rem;    margin-bottom: 1rem; }
+h5 { font-size: 1.25rem; font-weight: 550; color: var(--color-secondary);          margin-top: 1.75rem; margin-bottom: -.25rem; }
+h6 { font-size: 1.05rem; font-weight: 650; color: black;                margin-top: 1.5rem;  margin-bottom: -.5rem; }
+
+blockquote {
+    border-left: 2px solid var(--color-secondary);
+    background: var(--light-background);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+blockquote blockquote {
+    border-left: 2px solid var(--color-secondary);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Need #write to be more specific than base.css. */
+content #write .md-task-list-item {
+    /* ul and ol have a rather small padding, but I want checklist items
+    to be indented a bit more. */
+    margin-left: 1rem
+}
+
+/* Need #write to be more specific than base.css. */
+content #write .md-task-list-item > input {
+    width: 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    left: -5px;
+
+    /* Revert stuff from base.css. Needs to be set explicitly because otherwise
+    the i-beam cursor gets used while the line is being edited. */
+    cursor: default;
+}
+
+
+ul, ol {
+    padding-left: 1.5rem
+}

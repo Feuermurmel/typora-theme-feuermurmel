@@ -1,0 +1,85 @@
+#outline-content code,
+#outline-content mark,
+#outline-content strong,
+#outline-content em,
+#outline-content a,
+#outline-content u,
+#outline-content del {
+    font-family: unset;
+    font-weight: unset;
+    font-style: unset;
+    text-decoration: none;
+    background: unset;
+
+    /* Both bootstrap.css and base.css set this to black, so we need to revert
+    this so that the selected heading's color is applied. */
+    color: unset;
+}
+
+
+/* Styles to all inline elements are only applied within <content> so that they
+are not applied in the outline. */
+content code {
+    font-family: ui-monospace;
+
+    /* The font looks a bit bigger, even though it has the same height. */
+    font-size: var(--monospace-font-size);
+
+    /* Only add the horizontal padding below. */
+    padding: 2px 0;
+
+    color: var(--color-primary);
+    background-color: var(--light-background);
+}
+
+content mark {
+    background-color: yellow;
+
+    /* Only add the horizontal padding below. */
+    padding: 2px 0;
+}
+
+content :not(.md-expand) > code,
+content :not(.md-expand) > mark {
+    /* The padding and border radius is only added if we're not in expanded
+    mode, otherwise, there's a gap before the caret when it's located right
+    after the left or before the right backtick. */
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 5px;
+}
+
+content [md-inline] > strong {
+    color: var(--color-primary);
+}
+
+content em {
+    font-style: italic;
+}
+
+/*content .md-link.md-expand > a {*/
+/*    color: var(--color-primary);*/
+/*}*/
+
+/* Style links and URLs, except for the link text part when editing a link. */
+content .md-link:not([md-inline="link"].md-expand) > a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* The URL part of links. */
+content .md-url {
+    color: var(--color-markup);
+}
+
+/* XML comments. */
+content .md-comment {
+    font-size: var(--monospace-font-size);
+    color: var(--color-markup);
+}
+
+/* Class used for some markdown syntax that is only visible while the cursor
+is within the element. */
+content .md-meta {
+    color: var(--color-markup);
+}

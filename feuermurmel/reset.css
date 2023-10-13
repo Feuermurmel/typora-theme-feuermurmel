@@ -1,0 +1,24 @@
+html {
+    /* Set to "antialias" by base.css. */
+    -webkit-font-smoothing: initial;
+}
+
+.md-comment {
+    /* Set to 0.6 by base.css. */
+    opacity: unset;
+}
+
+.md-url {
+    /* Pointer cursor added by base.css. */
+    cursor: inherit;
+}
+
+a {
+    /* Remove styling set by browser stylesheet. */
+    color: unset;
+    text-decoration: unset;
+
+    /* Prevent pointer cursor on link elements. These are not clickable
+    without holding down command. */
+    cursor: inherit;
+}

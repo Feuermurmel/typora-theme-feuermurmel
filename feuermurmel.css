@@ -1,0 +1,50 @@
+@import "feuermurmel/reset.css";
+@import "feuermurmel/fonts.css";
+@import "feuermurmel/block-elements.css";
+@import "feuermurmel/inline-elements.css";
+@import "feuermurmel/tables.css";
+@import "feuermurmel/codemirror.css";
+@import "feuermurmel/outline.css";
+
+:root {
+    /* Mainly used for highlighting marked-up text,
+    e.g. bold text, links, and headings. */
+    --color-primary: #c54a9a;
+
+    /* Used for highlighting as an alternative to --color-primary,
+    e.g. smaller headings. */
+    --color-secondary: #818181;
+
+    /* Used to highlight markup characters while editing. */
+    --color-markup: #1c719d;
+
+    --light-background: #f6f6f6;
+    --table-border: #ccc;
+
+    /* Used for the currently selected section in the outline. */
+    --color-selection: var(--color-markup);
+
+    /* The font looks a bit bigger, even though it has the same height. */
+    --monospace-font-size: 0.9em;
+}
+
+body {
+    /* Default font for all text. */
+    font-family: "SF Pro Text", sans-serif;
+}
+
+#write {
+    /* Line height used for the editor, but not e.g. for the outline. */
+    line-height: 1.6;
+
+    /* Otherwise the caret gets the color from the text being edited. */
+    caret-color: black;
+}
+
+@media print {
+    html {
+        /* Use a smaller font when printing because using
+        the same size as on screen leads to very big text. */
+        font-size: 11px;
+    }
+}

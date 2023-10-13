@@ -1,0 +1,57 @@
+/* Source: https://theme.typora.io/theme/Lapis/ */
+/*
+ * Code Block - Color Scheme
+ */
+
+.cm-s-inner .cm-keyword { color: #1694b6 !important; }
+.cm-s-inner .cm-operator { color: #2f86d2 !important; }
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-builtin,
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-tag,
+.cm-s-inner .cm-property,
+.cm-s-inner .cm-quote { color: #b9218e !important; }
+.cm-s-inner .cm-variable-2 { color: #7aadad !important; }
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type,
+.cm-s-inner .cm-atom { color: #378ed8 !important; }
+.cm-s-inner .cm-number { color: #1a5494 !important; }
+.cm-s-inner .cm-def,
+.cm-s-inner .cm-qualifier { color: #0744ac !important; }
+.cm-s-inner .cm-string { color: #6f42c2 !important; }
+.cm-s-inner .cm-string-2 { color: #27638f !important; }
+.cm-s-inner .cm-comment { color: #9a9a9a !important; }
+.cm-s-inner .cm-meta { color: #0b93be !important; }
+.cm-s-inner .cm-attribute { color: #8f6aa8 !important; }
+.cm-s-inner .cm-error {
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: #b9218e40 !important;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background-color: rgba(167, 178, 189, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+    background-color: rgba(167, 178, 189, 0.2);
+}
+
+.md-rawblock .md-rawblock-tooltip {
+    inset: auto 0.3rem auto auto;
+    transform: translateY(-120%);
+}
+
+/* For the Markdown source code editor. Need a very specif editor to
+override the default from base-control.css. */
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: 1px solid black;
+}

@@ -1,0 +1,50 @@
+/* Hide toolbar above outline. */
+.sidebar-tabs {
+    display: none;
+}
+.sidebar-content {
+    padding-top: 20px;
+}
+
+/* Trim long titles in outline. */
+.outline-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.outline-label {
+    display: inline;
+}
+
+/* Remove defaults set by base.css. */
+.outline-label:hover {
+    text-decoration: none;
+}
+.outline-item:hover {
+    background-color: unset;
+}
+/* Specific selector to override base.css. */
+.pin-outline .outline-active {
+    font-weight: unset;
+}
+
+/* Active item. */
+/* Selector needs to be more specific that the selector `.outline-label:hover` above. */
+.outline-item-active, .outline-item-active:hover {
+    background-color: var(--color-selection);
+    color: white;
+
+    /* This is the same shenanigans done by base.css, overriding and re-using it here. */
+    margin-left: -28px;
+    margin-right: -28px;
+    border-left: 28px solid var(--color-selection);
+    border-right: 28px solid var(--color-selection);
+}
+
+.outline-item, .outline-label {
+    /* Remove pointer cursor set by base.css. */
+    cursor: default;
+
+    /* Set base.css. Messes with the vertical alignment of the ellipsis on overflow. */
+    vertical-align: unset;
+}
